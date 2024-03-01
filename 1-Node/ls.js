@@ -17,7 +17,6 @@
 // process.exit(0);
 // console.log(process.argv);
 
-const { ChildProcess } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 const directory = process.argv[2] ?? '.';
