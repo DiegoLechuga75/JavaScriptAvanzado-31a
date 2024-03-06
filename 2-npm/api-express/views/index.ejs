@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Express</title>
+</head>
+
+<body>
+    <h1>Clase de Express! 🫶</h1>
+    <code>./views/indes.ejs</code>
+    <br>
+    <br>
+    <!-- Se ve en la pantalla -->
+    <!-- locals.text === Este es texto desde Server.js -->
+    <%= locals.text %>
+        <!-- div.innerText = locals.text -->
+        <!-- NO se ve en la pantalla -->
+        <% const num=2**6 %>
+            <ul>
+                <!-- Se ve en la pantalla -->
+                <li>
+                    <%= num %>
+                </li>
+            </ul>
+</body>
+
+</html>
