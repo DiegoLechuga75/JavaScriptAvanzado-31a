@@ -3,6 +3,7 @@ const form = document.querySelector('form');
 const dbUrl = 'http://localhost:3000/tasks';
 
 function renderTasks(responseJson) {
+    tasksContainer.innerHTML = '';
     for (let i = 0; i < responseJson.length; i++) {
         const task = document.createElement('div');
         const taskHtml = `
@@ -58,11 +59,6 @@ async function editDoneHandler(editInput, id) {
     renderTasks(content);
 }
 
-
-
-
-
-
 async function getAllTasks() {
     const response = await fetch(dbUrl);
     const responseJson = await response.json();
@@ -92,7 +88,7 @@ form.addEventListener('submit', async (e) => {
 
     const rawResponse = await fetch(dbUrl, configPost);
     const content = await rawResponse.json();
-    renderTasks(content);
+    await getAllTasks();
 })
 
 
